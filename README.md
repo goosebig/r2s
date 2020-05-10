@@ -84,3 +84,38 @@ Network
 固件名：FriendlyWrt_xxx_NanoPi-R2S_arm64_sd.img
 
 配置文件名：r2s.config
+
+三.再次编译
+
+1.固件配置
+
+如安装首次编译配置请跳过
+
+如想更改配置请删除配置文件，命令如下。
+
+命令：rm -rf ~/friendlywrt-rk3328/configs/r2s.config
+
+编译过程中会要求配置固件
+
+2.更改固件ip
+
+查看ip命令：sed -n '103p' ~/friendlywrt-rk3328/friendlywrt/package/base-files/files/bin/config_generate
+
+假如ip是192.168.1.1
+将x.x.x.x替换你想要的ip
+修改ip命令：sed -i 's/192.168.1.1/x.x.x.x/g' ~/friendlywrt-rk3328/friendlywrt/package/base-files/files/bin/config_generate
+
+3.授权并运行脚本
+
+命令：chmod +x 2.再次编译.sh && ./2.再次编译.sh
+
+4.编译过程
+
+(1)会要求输入root密码
+(2)如果删除了固件配置文件，会要求配置固件，请参考首次编译配置固件。
+
+5.固件和配置文件会自动拷贝到用户根目录下，请妥善保存
+
+固件名：FriendlyWrt_xxx_NanoPi-R2S_arm64_sd.img
+
+配置文件名：r2s.config
