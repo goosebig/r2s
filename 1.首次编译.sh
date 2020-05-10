@@ -50,7 +50,7 @@ git pull
 
 #拷贝lean相关文件到r2s源内
 
-cp ~/friendlywrt-rk3328/lede/feeds.conf.default ~/friendlywrt-rk3328/friendlywrt/feeds.conf.default
+cp -rf ~/friendlywrt-rk3328/lede/feeds.conf.default ~/friendlywrt-rk3328/friendlywrt/feeds.conf.default
 
 cp -rf ~/friendlywrt-rk3328/lede/package/lean ~/friendlywrt-rk3328/friendlywrt/package/
 
@@ -72,14 +72,14 @@ cp -rf ~/friendlywrt-rk3328/lede/package/libs/libcxx ~/friendlywrt-rk3328/friend
 sed -i 's/#src-git helloworld/src-git helloworld/g' ~/friendlywrt-rk3328/friendlywrt/feeds.conf.default
 
 #更新融合后的源码
-cd ~/friendlywrt-rk3328/friendlywrt
+cd ~/friendlywrt-rk3328/friendlywrt/
 
 ./scripts/feeds update -a
 
 ./scripts/feeds install -a
 
 #编译固件
-cd ~/friendlywrt-rk3328/friendlywrt
+cd ~/friendlywrt-rk3328/friendlywrt/
 
 make -j1 download v=s
 
@@ -87,7 +87,7 @@ cd ~/friendlywrt-rk3328
 
 ./build.sh nanopi_r2s.mk
 
-cp ~/friendlywrt-rk3328/scripts/sd-fuse/out/FriendlyWrt_*_NanoPi-R2S_arm64_sd.img ~/
+cp -rf ~/friendlywrt-rk3328/scripts/sd-fuse/out/FriendlyWrt_*_NanoPi-R2S_arm64_sd.img ~/
 
 #备份配置文件
 cp -rf ~/friendlywrt-rk3328/friendlywrt/.config ~/friendlywrt-rk3328/configs/r2s.config
