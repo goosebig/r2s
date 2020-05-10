@@ -118,6 +118,10 @@ Network>IP Addresses and Names选择 dns-scripts_no-ip_com
 
 3.授权并运行脚本
 
+进入脚本目录
+
+命令：cd r2s
+
 命令：chmod +x 2.再次编译.sh && ./2.再次编译.sh
 
 4.编译过程
