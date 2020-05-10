@@ -6,6 +6,7 @@
 
 默认登陆IP 192.168.1.1, 密码 空
 
+
 一.准备工作
 
 1.系统ubuntu18.4 x64系统
@@ -60,15 +61,14 @@ git clone https://github.com/tl768/r2s.git ~/r2s
 
 配置说明:就一瓶酸奶
 
+
 二.首次编译
 
-1.进入脚本目录
-
-2.授权并运行脚本
+1.授权并运行脚本
 
 命令：cd ~/r2s && chmod +x 1.首次编译.sh && ./1.首次编译.sh
 
-3.编译过程
+2.编译过程
 
 (1)会要求输入root密码
 
@@ -96,11 +96,12 @@ Network>IP Addresses and Names选择 ddns-scripts_aliyun
                             
 Network>IP Addresses and Names选择 dns-scripts_no-ip_com
                             
-(3)固件和配置文件会自动拷贝到用户根目录下，请妥善保存
+3.固件和配置文件会自动拷贝到用户根目录下，请妥善保存
 
 固件名：FriendlyWrt_xxx_NanoPi-R2S_arm64_sd.img
 
 配置文件名：r2s.config
+
 
 三.再次编译
 
@@ -130,11 +131,7 @@ Network>IP Addresses and Names选择 dns-scripts_no-ip_com
 
 3.授权并运行脚本
 
-进入脚本目录
-
-命令：cd r2s
-
-命令：chmod +x 2.再次编译.sh && ./2.再次编译.sh
+命令：cd r2s && chmod +x 2.再次编译.sh && ./2.再次编译.sh
 
 4.编译过程
 
