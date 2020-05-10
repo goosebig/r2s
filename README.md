@@ -67,26 +67,25 @@ git clone https://github.com/tl768/r2s.git
 
 基本选项设置(选项框需要空格选成*才生效)
 
-Target System               选择 ockchip rk3328 (aarch64)
+Target System			选择 ockchip rk3328 (aarch64)
 
-Target Images               选择 squashfs
+Target Images			选择 squashfs
 
-Base system                 取消 dnsmasq
-
-                            选择 dnsmasq-full
+Base system			取消 dnsmasq
+				选择 dnsmasq-full
 LuCI
-     Themes                 选择 luci-theme-bootstrap
+	Themes			选择 luci-theme-bootstrap
      
-     Applications           选择 自己想要的
+	Applications		选择 自己想要的
      
 Network
-     File Transfer          选择wget
+	File Transfer		选择wget
      
-     IP Addresses and Names 选择 ddns-scripts
+	IP Addresses and Names	选择 ddns-scripts
      
-                            选择 ddns-scripts_aliyun
+                            			选择 ddns-scripts_aliyun
                             
-                            选择 dns-scripts_no-ip_com
+				选择 dns-scripts_no-ip_com
                             
 (3)固件和配置文件会自动拷贝到用户根目录下，请妥善保存
 
