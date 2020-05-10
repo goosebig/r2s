@@ -72,21 +72,18 @@ Target System               选择 ockchip rk3328 (aarch64)
 Target Images               选择 squashfs
 
 Base system                 取消 dnsmasq
-                            
-                            选择 dnsmasq-full
 
+                            选择 dnsmasq-full
 LuCI
-     
      Themes                 选择 luci-theme-bootstrap
      
      Applications           选择 自己想要的
-
-Network
      
+Network
      File Transfer          选择 wget
      
      IP Addresses and Names 选择 ddns-scripts
-                            
+     
                             选择 ddns-scripts_aliyun
                             
                             选择 dns-scripts_no-ip_com
