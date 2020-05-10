@@ -1,3 +1,5 @@
+NanoPi-R2S固件本地编译项目(FriendlyWRT+lean)
+
 注意事项
 
 不要用 root 用户 git 和编译
