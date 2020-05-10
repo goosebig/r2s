@@ -33,7 +33,7 @@ repo sync -l --no-clone-bundle
 repo sync --no-clone-bundle
 
 #修改路由器ip
-sed -i 's/192.168.2.1/10.0.0.254/g' ~/friendlywrt-rk3328/friendlywrt/package/base-files/files/bin/config_generate
+sed -i 's/192.168.2.1/192.168.1.1/g' ~/friendlywrt-rk3328/friendlywrt/package/base-files/files/bin/config_generate
 
 #下载lean源
 cd ~/friendlywrt-rk3328/
