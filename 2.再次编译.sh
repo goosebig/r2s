@@ -49,7 +49,7 @@ cd ~/friendlywrt-rk3328/friendlywrt
 
 ./scripts/feeds install -a
 
-#生成预设固件配置文件(有配置文件时取消#)
+#载入首次编译的固件配置文件(想替换预设固件配置文件请替换)
 
 cat ~/friendlywrt-rk3328/configs/r2s.config > ~/friendlywrt-rk3328/friendlywrt/.config
 
