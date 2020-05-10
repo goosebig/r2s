@@ -42,7 +42,7 @@ xxx是新包名
 
 5.下载代码
 
-git clone https://github.com/tl768/r2s.git
+git clone https://github.com/tl768/r2s.git ~/r2s
 
 6.固件IP
 
@@ -52,21 +52,27 @@ git clone https://github.com/tl768/r2s.git
 
 命令：cd r2s && sed -i 's/192.168.1.1/192.168.3.1/g' 1.首次编译.sh
 
+7.固件配置
+
+使用预设固件配置.请运行以下命令.(想自定义固件配置请跳过)
+
+命令:cp -rf ~/r2s/r2s.config ~/friendlywrt-rk3328/configs/
+
+配置说明:就一瓶酸奶
+
 二.首次编译
 
 1.进入脚本目录
 
-命令：cd r2s
-
 2.授权并运行脚本
 
-命令：chmod +x 1.首次编译.sh && ./1.首次编译.sh
+命令：cd ~/r2s && chmod +x 1.首次编译.sh && ./1.首次编译.sh
 
 3.编译过程
 
 (1)会要求输入root密码
 
-(2)会要求配置固件
+(2)会要求配置固件(使用预设固件配置没有这一步)
 
 基本选项设置(选项框需要空格选成*才生效)
 
@@ -102,11 +108,17 @@ Network>IP Addresses and Names选择 dns-scripts_no-ip_com
 
 如安装首次编译配置请跳过
 
-如想更改配置请删除配置文件，命令如下。
+(1)如想自定义固件配置请删除配置文件，命令如下。
 
 命令：rm -rf ~/friendlywrt-rk3328/configs/r2s.config
 
 编译过程中会要求配置固件
+
+(2)使用预设固件配置.请运行以下命令.(想自定义固件配置请跳过)
+
+命令:cp -rf ~/r2s/r2s.config ~/friendlywrt-rk3328/configs/
+
+配置说明:就一瓶酸奶
 
 2.更改固件ip
 
