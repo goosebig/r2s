@@ -6,7 +6,6 @@ cd
 sudo apt-get update
 
 sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3.5 python2.7 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf
-
 wget -O - https://raw.githubusercontent.com/friendlyarm/build-env-on-ubuntu-bionic/master/install.sh | bash
 
 cd /tmp/
@@ -18,14 +17,17 @@ git clone https://github.com/friendlyarm/repo
 sudo cp repo/repo /usr/bin/
 
 #删除历史包
+
 rm -rf ~/friendlywrt-rk3328
 
 #解压r2s包
+
 cd ~/
 
 tar xvf friendlywrt-rk3328-20200415.tar
 
 #更新r2s源码
+
 cd ~/friendlywrt-rk3328/
 
 repo sync -l --no-clone-bundle
@@ -33,9 +35,11 @@ repo sync -l --no-clone-bundle
 repo sync --no-clone-bundle
 
 #修改路由器ip
+
 sed -i 's/192.168.2.1/192.168.1.1/g' ~/friendlywrt-rk3328/friendlywrt/package/base-files/files/bin/config_generate
 
 #下载lean源
+
 cd ~/friendlywrt-rk3328/
 
 git clone https://github.com/coolsnowwolf/lede
@@ -96,7 +100,7 @@ cp -rf ~/friendlywrt-rk3328/friendlywrt/.config ~/r2s.config
 
 #删除编译数据
 
-cd ~/friendlywrt-rk3328
+cd ~/friendlywrt-rk3328/
 
 ./build.sh cleanall
 
