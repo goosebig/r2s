@@ -82,4 +82,5 @@ Network
 (3)固件和配置文件会自动拷贝到用户根目录下，请妥善保存
 
 固件名：FriendlyWrt_xxx_NanoPi-R2S_arm64_sd.img
+
 配置文件名：r2s.config
