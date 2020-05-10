@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#部署编译环境
+#部署环境
 cd
 
 sudo apt-get update
@@ -17,10 +17,10 @@ git clone https://github.com/friendlyarm/repo
 
 sudo cp repo/repo /usr/bin/
 
-#删除源
+#删除历史包
 rm -rf ~/friendlywrt-rk3328
 
-#解压r2s源码包
+#解压r2s包
 cd ~/
 
 tar xvf friendlywrt-rk3328-20200415.tar
@@ -79,7 +79,7 @@ cd ~/friendlywrt-rk3328/friendlywrt
 ./scripts/feeds install -a
 
 #导入配置文件(有配置文件时取消#)
-#cat ~/friendlywrt-rk3328/configs/r2s.config > ~/friendlywrt-rk3328/friendlywrt/.config
+cat ~/friendlywrt-rk3328/configs/r2s.config > ~/friendlywrt-rk3328/friendlywrt/.config
 
 #编译固件
 cd ~/friendlywrt-rk3328/friendlywrt
