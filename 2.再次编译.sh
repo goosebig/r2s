@@ -52,7 +52,7 @@ cat ~/friendlywrt-rk3328/configs/r2s.config > ~/friendlywrt-rk3328/friendlywrt/.
 #编译固件
 cd ~/friendlywrt-rk3328/friendlywrt
 
-make -j6 download v=s
+make -j1 download v=s
 
 cd ~/friendlywrt-rk3328
 
