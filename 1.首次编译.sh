@@ -82,6 +82,10 @@ cd ~/friendlywrt-rk3328/friendlywrt/
 
 ./scripts/feeds install -a
 
+#生成预设固件配置文件(有配置文件时取消#)
+
+cat ~/friendlywrt-rk3328/configs/r2s.config > ~/friendlywrt-rk3328/friendlywrt/.config
+
 #编译固件
 cd ~/friendlywrt-rk3328/friendlywrt/
 
