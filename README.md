@@ -80,7 +80,7 @@ LuCI
      Applications           选择 自己想要的
      
 Network
-     File Transfer          选择 wget
+     File Transfer          选择wget
      
      IP Addresses and Names 选择 ddns-scripts
      
