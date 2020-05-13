@@ -63,7 +63,7 @@ cd ~/friendlywrt-rk3328/
 
 ./build.sh nanopi_r2s.mk
 
-cp ~/friendlywrt-rk3328/scripts/sd-fuse/out/FriendlyWrt_*_NanoPi-R2S_arm64_sd.img ~/
+cp -rf ~/friendlywrt-rk3328/scripts/sd-fuse/out/FriendlyWrt*NanoPi-R2S_arm64_sd.img ~/
 
 #备份配置文件
 
