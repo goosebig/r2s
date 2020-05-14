@@ -131,7 +131,7 @@ Network>IP Addresses and Names选择 dns-scripts_no-ip_com
 将x.x.x.x替换你想要的ip
 修改ip命令：sed -i 's/192.168.1.1/x.x.x.x/g' ~/friendlywrt-rk3328/friendlywrt/package/base-files/files/bin/config_generate
 
-3.授权并运行脚本
+3.运行脚本
 
 命令：bash ~/r2s/./2.再次编译.sh
 
