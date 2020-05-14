@@ -66,9 +66,9 @@ git clone https://github.com/tl768/r2s.git ~/r2s
 
 二.首次编译
 
-1.授权并运行脚本
+1.运行脚本
 
-命令：cd ~/r2s && chmod +x 1.首次编译.sh && ./1.首次编译.sh
+命令：bash ~/r2s/1.首次编译.sh
 
 2.编译过程
 
@@ -133,7 +133,7 @@ Network>IP Addresses and Names选择 dns-scripts_no-ip_com
 
 3.授权并运行脚本
 
-命令：cd r2s && chmod +x 2.再次编译.sh && ./2.再次编译.sh
+命令：bash ~/r2s/./2.再次编译.sh
 
 4.编译过程
 
