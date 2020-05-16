@@ -1,7 +1,6 @@
 #!/bin/bash
 #
 #部署环境
-#
 cd && \
 #
 sudo apt-get update && \
@@ -11,38 +10,29 @@ wget -O - https://raw.githubusercontent.com/friendlyarm/build-env-on-ubuntu-bion
 #
 cd /tmp/ && \
 #
-rm -rf repo && \
+rm -rf ~/tmp/repo;\
 #
 git clone https://github.com/friendlyarm/repo && \
 #
 sudo cp repo/repo /usr/bin/ && \
 #
-#
 #删除历史包
-#
 rm -rf ~/friendlywrt-rk3328 && \
 #
-#
 #解压r2s包
-#
 cd ~/ && \
 #
 tar xvf friendlywrt-rk3328-20200415.tar && \
 #
-#
 #更新r2s源码
-#
 cd ~/friendlywrt-rk3328/ && \
 #
 repo sync -l --no-clone-bundle && \
 #
 repo sync --no-clone-bundle && \
 #
-#
 #修改路由器ip
-#
-sed -i 's/192.168.2.1/192.168.1.1/g' ~/friendlywrt-rk3328/friendlywrt/package/base-files/files/bin/config_generate && \
-#
+sed -i 's/192.168.2.1/10.0.0.254/g' ~/friendlywrt-rk3328/friendlywrt/package/base-files/files/bin/config_generate && \
 #
 #下载lean源
 #
@@ -58,9 +48,7 @@ git pull && \
 #
 ./scripts/feeds install -a && \
 #
-#
 #拷贝lean相关文件到r2s源内
-#
 cp -rf ~/friendlywrt-rk3328/lede/feeds.conf.default ~/friendlywrt-rk3328/friendlywrt/feeds.conf.default && \
 #
 cp -rf ~/friendlywrt-rk3328/lede/package/lean ~/friendlywrt-rk3328/friendlywrt/package/ && \
@@ -79,10 +67,8 @@ cp -rf ~/friendlywrt-rk3328/lede/package/libs/librpc ~/friendlywrt-rk3328/friend
 #
 cp -rf ~/friendlywrt-rk3328/lede/package/libs/libcxx ~/friendlywrt-rk3328/friendlywrt/package/libs/ && \
 #
-#
 #修改lean源文件
 sed -i 's/#src-git helloworld/src-git helloworld/g' ~/friendlywrt-rk3328/friendlywrt/feeds.conf.default && \
-#
 #
 #更新融合后的源码
 cd ~/friendlywrt-rk3328/friendlywrt/ && \
@@ -91,11 +77,8 @@ cd ~/friendlywrt-rk3328/friendlywrt/ && \
 #
 ./scripts/feeds install -a && \
 #
-#
-#生成预设固件配置文件(有配置文件时取消#)
-#
-cat ~/friendlywrt-rk3328/configs/r2s.config > ~/friendlywrt-rk3328/friendlywrt/.config && \
-#
+#载入自定义固件配置文件
+cat ~/friendlywrt-rk3328/configs/r2s.config > ~/friendlywrt-rk3328/friendlywrt/.config;\
 #
 #编译固件
 cd ~/friendlywrt-rk3328/friendlywrt && \
@@ -108,15 +91,12 @@ cd ~/friendlywrt-rk3328 && \
 #
 cp -rf ~/friendlywrt-rk3328/scripts/sd-fuse/out/FriendlyWrt_*_NanoPi-R2S_arm64_sd.img ~/ && \
 #
-#
 #备份配置文件
 cp -rf ~/friendlywrt-rk3328/friendlywrt/.config ~/friendlywrt-rk3328/configs/r2s.config && \
 #
 cp -rf ~/friendlywrt-rk3328/friendlywrt/.config ~/r2s.config && \
 #
-#
 #删除编译数据
-#
 cd ~/friendlywrt-rk3328/ && \
 #
 ./build.sh cleanall && \
