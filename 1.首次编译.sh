@@ -10,7 +10,7 @@ wget -O - https://raw.githubusercontent.com/friendlyarm/build-env-on-ubuntu-bion
 #
 cd /tmp/ && \
 #
-rm -rf ~/tmp/repo;\
+rm -rf repo;\
 #
 git clone https://github.com/friendlyarm/repo && \
 #
@@ -20,7 +20,7 @@ sudo cp repo/repo /usr/bin/ && \
 rm -rf ~/friendlywrt-rk3328 && \
 #
 #解压r2s包
-cd ~/ && \
+cd && \
 #
 tar xvf friendlywrt-rk3328-20200415.tar && \
 #
