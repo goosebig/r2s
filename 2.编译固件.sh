@@ -48,7 +48,10 @@ cd ~/friendlywrt-rk3328/friendlywrt && \
 #载入自定义固件配置文件(想替换预设固件配置文件请替换)
 cat ~/friendlywrt-rk3328/configs/r2s.config > ~/friendlywrt-rk3328/friendlywrt/.config;\
 #
-#编译固件
+#修改路由器ip
+sed -i 's/192.168.2.1/192.168.1.1/g' ~/friendlywrt-rk3328/friendlywrt/package/base-files/files/bin/config_generate && \
+
+##编译固件
 cd ~/friendlywrt-rk3328/friendlywrt && \
 #
 make -j1 download v=s && \
