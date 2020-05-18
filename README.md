@@ -54,7 +54,7 @@ git clone https://github.com/tl768/r2s.git ~/r2s
 
 1.运行脚本
 
-命令：bash ~/r2s/1.部署环境
+命令：bash ~/r2s/1.部署环境.sh
 
 
 三.首次编译
