@@ -47,15 +47,27 @@ xxx是新包名
 
 git clone https://github.com/tl768/r2s.git ~/r2s
 
-6.固件IP
+配置说明:就一瓶酸奶
+
+
+二.部署环境
+
+1.运行脚本
+
+命令：bash ~/r2s/1.部署环境
+
+
+三.首次编译
+
+1.固件IP
 
 脚本将原固件192.168.2.1更改成192.168.1.1，如想更改成其他ip，请按照以下命令操作。
 
 假如您想更改成192.168.3.1
 
-命令：cd r2s && sed -i 's/192.168.1.1/192.168.3.1/g' 1.首次编译.sh
+命令：cd r2s && sed -i 's/192.168.1.1/192.168.3.1/g' 2.编译固件.sh
 
-7.固件配置
+2.固件配置
 
 使用预设固件配置.请运行以下命令.(想自定义固件配置请跳过)
 
@@ -63,14 +75,11 @@ git clone https://github.com/tl768/r2s.git ~/r2s
 
 配置说明:就一瓶酸奶
 
+3.运行脚本
 
-二.首次编译
+命令：bash ~/r2s/2.编译固件.sh
 
-1.运行脚本
-
-命令：bash ~/r2s/1.首次编译.sh
-
-2.编译过程
+4.编译过程
 
 (1)会要求输入root密码
 
@@ -105,7 +114,7 @@ Network>IP Addresses and Names选择 dns-scripts_no-ip_com
 配置文件名：r2s.config
 
 
-三.再次编译
+四.再次编译
 
 1.固件配置
 
@@ -133,7 +142,7 @@ Network>IP Addresses and Names选择 dns-scripts_no-ip_com
 
 3.运行脚本
 
-命令：bash ~/r2s/./2.再次编译.sh
+命令：bash ~/r2s/2.编译固件.sh
 
 4.编译过程
 
