@@ -50,8 +50,8 @@ cat ~/friendlywrt-rk3328/configs/r2s.config > ~/friendlywrt-rk3328/friendlywrt/.
 #
 #修改路由器ip
 sed -i 's/192.168.2.1/192.168.1.1/g' ~/friendlywrt-rk3328/friendlywrt/package/base-files/files/bin/config_generate && \
-
-##编译固件
+#
+#编译固件
 cd ~/friendlywrt-rk3328/friendlywrt && \
 #
 make -j1 download v=s && \
@@ -73,5 +73,7 @@ cd ~/friendlywrt-rk3328/ && \
 ./build.sh cleanall && \
 #
 rm -rf ~/friendlywrt-rk3328/friendlywrt/tmp/ && \
+#
+echo 编译完成
 #
 exit 0
